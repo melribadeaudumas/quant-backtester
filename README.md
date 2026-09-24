@@ -42,13 +42,13 @@ pip install -r requirements.txt   # yfinance is optional; numpy + pandas are eno
 Command line:
 
 ```bash
-# No network needed — runs on ~10 years of synthetic data
+# ~10 years of synthetic data
 python -m backtester.cli --synthetic
 
-# Real data (requires yfinance)
+# o use real data with yfinance
 python -m backtester.cli --ticker AAPL --period 10y --cost-bps 1.5
 
-# From your own CSV (needs a Date index and a Close / Adj Close column)
+# If you want to test with your own csv file
 python -m backtester.cli --csv prices.csv --sort-by max_drawdown
 ```
 
@@ -87,11 +87,8 @@ tests/
   test_metrics.py
 ```
 
-## Disclaimer
 
-For research and educational use only. Nothing here is investment advice, and
-past (or backtested) performance does not indicate future results.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT  see [LICENSE](LICENSE).
