@@ -25,7 +25,7 @@ def _build_parser() -> argparse.ArgumentParser:
     src.add_argument("--csv", help="Path to a CSV price file.")
     src.add_argument("--synthetic", action="store_true", help="Use built-in synthetic data.")
     p.add_argument("--period", default="10y", help="History for --ticker (default 10y).")
-    p.add_argument("--cost-bps", type=float, default=1.0, help="Transaction cost, bps per trade.")
+    p.add_argument("--cost-bps", type=float, default=0.0, help="Transaction cost, bps per trade.")
     p.add_argument("--risk-free", type=float, default=0.0, help="Annual risk-free rate.")
     p.add_argument("--sort-by", default="sharpe",
                    choices=["sharpe", "cagr", "total_return", "max_drawdown", "calmar"],
